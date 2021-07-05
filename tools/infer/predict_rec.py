@@ -248,6 +248,14 @@ class TextRecognizer(object):
 
 
 def main(args):
+    name='识别结果_slim_1.txt'
+    try:
+        os.remove(name)
+    except:
+        pass
+    
+    with open(name,'a') as f:
+        f.write('图片名称\t标注内容\n')
     image_file_list = get_image_file_list(args.image_dir)
     text_recognizer = TextRecognizer(args)
     total_run_time = 0.0
@@ -268,6 +276,7 @@ def main(args):
             try:
                 rec_res, predict_time = text_recognizer(img_list)
                 total_run_time += predict_time
+                # print(rec_res,111111111111111111111111111111111111111111111111111111111111111)
             except:
                 logger.info(traceback.format_exc())
                 logger.info(
@@ -281,6 +290,9 @@ def main(args):
             for ino in range(len(img_list)):
                 logger.info("Predicts of {}:{}".format(valid_image_file_list[
                     ino], rec_res[ino]))
+                with open(name,'a') as f:
+                    f.write('%s\t%s\n'%(valid_image_file_list[ino].split('/')[-1],rec_res[ino][0]))
+                # print(valid_image_file_list[ino].split('/')[-1],rec_res[ino],111111111111111111111111111111111)
             total_images_num += len(valid_image_file_list)
             valid_image_file_list = []
             img_list = []
