@@ -8,15 +8,15 @@ Global:
   # evaluation is run every 5000 iterations after the 4000th iteration
   eval_batch_step: [0, 400]
   cal_metric_during_train: False
-  pretrained_model: /home/aistudio/work/output/rec_chinese_mv3_v2.0/latest
-  checkpoints:
+  pretrained_model: 
+  checkpoints: /home/aistudio/work/checkpoint/latest
   save_inference_dir:
   use_visualdl: False
   infer_img: doc/imgs_words/ch/word_1.jpg
   # for data or label process
   character_dict_path: ppocr/utils/label.txt
   character_type: ch
-  max_text_length: 25
+  max_text_length: 10
   infer_mode: False
   use_space_char: True
   save_res_path: ./output/rec/predicts_chinese_mv3_v2.0.txt
@@ -61,7 +61,7 @@ PostProcess:
 
 Metric:
   name: RecMetric
-  main_indicator: norm_edit_dis
+  main_indicator: acc
 
 Train:
   dataset:
@@ -75,12 +75,12 @@ Train:
       - RecAug:
       - CTCLabelEncode: # Class handling label
       - RecResizeImg:
-          image_shape: [3, 32, 320]
+          image_shape: [3, 32, 224]
       - KeepKeys:
           keep_keys: ['image', 'label', 'length'] # dataloader will return list in this order
   loader:
     shuffle: True
-    batch_size_per_card: 512
+    batch_size_per_card: 256
     drop_last: True
     num_workers: 0
 
@@ -95,7 +95,7 @@ Eval:
           channel_first: False
       - CTCLabelEncode: # Class handling label
       - RecResizeImg:
-          image_shape: [3, 32, 320]
+          image_shape: [3, 32, 224]
       - KeepKeys:
           keep_keys: ['image', 'label', 'length'] # dataloader will return list in this order
   loader:
