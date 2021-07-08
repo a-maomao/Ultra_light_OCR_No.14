@@ -8,8 +8,8 @@ Global:
   # evaluation is run every 5000 iterations after the 4000th iteration
   eval_batch_step: [0, 400]
   cal_metric_during_train: False
-  pretrained_model: ./checkpoint/best_accuracy
-  checkpoints: 
+  pretrained_model: 
+  checkpoints: ./checkpoint/latest
   save_inference_dir:
   use_visualdl: False
   infer_img: doc/imgs_words/ch/word_1.jpg
