@@ -66,8 +66,8 @@ Metric:
 Train:
   dataset:
     name: SimpleDataSet
-    data_dir: /home/aistudio/data/data91114/TrainImages
-    label_file_list: ["/home/aistudio/data/data91114/LabelTrain.txt"]
+    data_dir: /home/aistudio/data/data87683/训练数据集/TrainImages
+    label_file_list: ["/home/aistudio/data/data87683/训练数据集/LabelTrain.txt"]
     transforms:
       - DecodeImage: # load image
           img_mode: BGR
@@ -87,8 +87,8 @@ Train:
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: /home/aistudio/data/data91114/TrainImages
-    label_file_list: ["/home/aistudio/data/data91114/LabelTrain.txt"]
+    data_dir: /home/aistudio/data/data87683/训练数据集/TrainImages
+    label_file_list: ["/home/aistudio/data/data87683/训练数据集/LabelTrain.txt"]
     transforms:
       - DecodeImage: # load image
           img_mode: BGR
