@@ -16,5 +16,5 @@ python3 tools/infer/predict_rec.py --image_dir='/home/aistudio/data/data97405/B�
 该模型被压缩到10Mb以内，符合比赛要求，在B榜测试数据集上识别精度78%
 
 # 识别结果可视化
-![image](https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/image1.jpg)
-![image1](https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/result1.jpg)
+![image](https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/image_1.jpg)
+![image](https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/result_1.jpg)
