@@ -11,6 +11,5 @@ python3 tools/infer/predict_rec.py --image_dir='/home/aistudio/data/data97405/B�
 2、修改了mobile-v3的网络结构并调优；
 3、修改了LSTM网络结构并调优。
 
-#识别可视化
-![Image text]
-(https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/image1.jpg)
+# 识别可视化
+![Image text] (https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/image1.jpg)
