@@ -13,4 +13,4 @@ python3 tools/infer/predict_rec.py --image_dir='/home/aistudio/data/data97405/B�
 
 # 识别可视化
 ![image](https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/image1.jpg)
-![image1] (https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/image1.jpg)
+![image1](https://github.com/a-maomao/Ultra_light_OCR_No.14/blob/main/imgs_for_show/result1.jpg)
